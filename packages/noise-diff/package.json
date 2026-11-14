@@ -1,0 +1,44 @@
+{
+  "name": "noise-diff",
+  "version": "0.1.0",
+  "description": "Sort the binary files of a pull request into noise (re-exports with identical content) and real changes, with a severity.",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "noise-diff": "dist/cli.js"
+  },
+  "main": "dist/index.js",
+  "types": "src/index.ts",
+  "files": ["dist/cli.js", "dist/index.js", "schema", "README.md", "LICENSE"],
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": ["binary", "diff", "pull-request", "github-action", "png", "pdf", "zip", "font", "svg", "noise"],
+  "scripts": {
+    "build": "node build.mjs",
+    "test": "vitest run",
+    "coverage": "vitest run --coverage",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@actions/artifact": "2.3.2",
+    "@actions/core": "1.11.1",
+    "fast-xml-parser": "5.12.0",
+    "fflate": "0.8.3",
+    "jpeg-js": "0.4.4",
+    "omggif": "1.0.10",
+    "picomatch": "4.0.7",
+    "pngjs": "7.0.0",
+    "yaml": "2.9.1",
+    "zod": "3.25.76"
+  },
+  "optionalDependencies": {
+    "sharp": "0.34.5"
+  },
+  "devDependencies": {
+    "@types/omggif": "1.0.5",
+    "@types/picomatch": "4.0.3",
+    "@types/pngjs": "6.0.5",
+    "sticky-pr": "workspace:*"
+  }
+}

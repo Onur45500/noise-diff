@@ -1,0 +1,17 @@
+{
+  "name": "sticky-pr",
+  "version": "0.1.0",
+  "private": true,
+  "description": "One sticky PR comment per tool: create-or-update, truncation, fork fallback, redaction.",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "build": "echo 'sticky-pr is bundled by its consumers'",
+    "test": "vitest run",
+    "coverage": "vitest run --coverage",
+    "typecheck": "tsc -p tsconfig.json"
+  }
+}
